@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Erine Archives</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 2em; background-color: #fff8f6; }
+  h1 { color: #d16ba5; }
+  .hidden { display: none; }
+  #password-form { margin-top: 1em; }
+  #password-input { padding: 0.5em; font-size: 1em; }
+  button { padding: 0.5em 1em; font-size: 1em; margin-left: 0.5em; background-color: #d16ba5; color: white; border: none; cursor: pointer; }
+  button:hover { background-color: #c05291; }
+  ul { list-style-type: none; padding: 0; }
+  li { margin: 0.5em 0; }
+  a { color: #6c5b7b; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <h1>The Erine Archives</h1>
+  <p id="message">Enter the secret password to read the love letters.</p>
+  <div id="password-form">
+    <input type="password" id="password-input" placeholder="Password">
+    <button onclick="checkPassword()">Unlock</button>
+  </div>
+  <div id="content" class="hidden">
+    <p>Welcome, my love! Here's where I'll share letters and moments just for you.</p>
+    <ul>
+      <li><a href="letter-1.html">Letter 1: Our story begins</a></li>
+    </ul>
+  </div>
+<script>
+const PASSWORD = 'erine'; // Change this to your secret password
+function checkPassword() {
+  const input = document.getElementById('password-input').value;
+  if (input === PASSWORD) {
+    document.getElementById('password-form').style.display = 'none';
+    document.getElementById('message').style.display = 'none';
+    document.getElementById('content').classList.remove('hidden');
+  } else {
+    alert('Incorrect password!');
+  }
+}
+</script>
+</body>
+</html>

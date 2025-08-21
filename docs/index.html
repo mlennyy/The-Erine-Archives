@@ -13,25 +13,25 @@
   button:hover { background-color: #c05291; }
   ul { list-style-type: none; padding: 0; }
   li { margin: 0.5em 0; }
-  a { color: #6c5b7b; text-decoration: none; }
+  a { color: #6b657b; text-decoration: none; }
   a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-  <h1>The Erine Archives</h1>
-  <p id="message">Enter the secret password to read the love letters.</p>
-  <div id="password-form">
-    <input type="password" id="password-input" placeholder="Password">
-    <button onclick="checkPassword()">Unlock</button>
-  </div>
-  <div id="content" class="hidden">
-    <p>Welcome, my love! Here's where I'll share letters and moments just for you.</p>
-    <ul>
-      <li><a href="letter-1.html">Letter 1: Our story begins</a></li>
-    </ul>
-  </div>
+<h1>The Erine Archives</h1>
+<p id="message">Enter the secret password to read the love letters.</p>
+<div id="password-form">
+  <input type="password" id="password-input" placeholder="Password">
+  <button onclick="checkPassword()">Unlock</button>
+</div>
+<div id="content" class="hidden">
+  <p>Welcome, my love! Here's where I'll share letters and moments just for you.</p>
+  <ul>
+    <li><a href="letter-1.html">Letter 1: Our story begins</a></li>
+  </ul>
+</div>
 <script>
-const PASSWORD = 'erine'; // Change this to your secret password
+const PASSWORD = 'Mclaren'; // Change this to your secret password
 function checkPassword() {
   const input = document.getElementById('password-input').value;
   if (input === PASSWORD) {
